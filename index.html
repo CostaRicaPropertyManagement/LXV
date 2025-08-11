@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LXV — Costa Rica Luxury Property Management</title>
+  <meta name="description" content="LXV provides all‑inclusive, luxury property management in Costa Rica: cleaning, maintenance, guest support, revenue optimization, legal & tax coordination, concierge, seasonal prep, and more." />
+  <meta name="theme-color" content="#047857" />
+  <!-- Tailwind v3 CDN (fixes missing color utilities like bg-white/10) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23047857'/%3E%3Cstop stop-color='%2310b981' offset='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='42' fill='%23FFD700' font-family='Arial'%3ELXV%3C/text%3E%3C/svg%3E" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { background: rgba(255,255,255,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-emerald-50 to-white text-slate-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#top" class="flex items-center gap-3 font-bold text-emerald-900">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-emerald-600 to-emerald-400 text-white shadow-soft">LXV</span>
+          <span class="hidden sm:inline">Luxury Property Management — Costa Rica</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-5 text-sm font-medium">
+          <a href="#services" class="hover:text-emerald-700">Services</a>
+          <a href="#how" class="hover:text-emerald-700">How it works</a>
+          <a href="#coverage" class="hover:text-emerald-700">Coverage</a>
+          <a href="#pricing" class="hover:text-emerald-700">Pricing</a>
+          <a href="#testimonials" class="hover:text-emerald-700">Reviews</a>
+          <a href="#contact" class="hover:text-emerald-700">Contact</a>
+        </nav>
+        <a href="#contact" class="rounded-full bg-emerald-700 px-4 py-2 text-white text-sm font-semibold hover:bg-emerald-800 shadow-soft">Get proposal</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero with image + overlay -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1600&auto=format&fit=crop" alt="Costa Rica coastline" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-emerald-900/20 to-white"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight text-emerald-900">Costa Rica Luxury Property Management</h1>
+        <div class="mt-6 max-w-2xl rounded-2xl bg-white/90 p-4 ring-1 ring-emerald-100 shadow-soft">
+          <p class="text-xl leading-relaxed text-slate-900"><strong>All‑inclusive services.</strong> Cleaning, handyman, revenue optimization, guest support, legal & tax coordination, concierge, smart tech, and seasonal prep — built for luxury homeowners.</p>
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-white font-semibold hover:bg-emerald-800 shadow-soft">Get a Proposal</a>
+          <a href="https://wa.me/15551234567?text=Hi%20LXV%2C%20I%27d%20like%20a%20property%20management%20proposal%20in%20Costa%20Rica" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-emerald-700 ring-1 ring-emerald-300 hover:ring-emerald-400 shadow-soft">Chat on WhatsApp</a>
+        </div>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="glass shadow-soft rounded-xl px-4 py-3 text-sm">24/7 Guest Support</div>
+          <div class="glass shadow-soft rounded-xl px-4 py-3 text-sm">Licensed & Insured</div>
+          <div class="glass shadow-soft rounded-xl px-4 py-3 text-sm">Superhost Experience</div>
+          <div class="glass shadow-soft rounded-xl px-4 py-3 text-sm">Tax & Compliance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Hotel‑grade Cleaning & Linens</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Handyman & Rapid Repairs</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Preventive Maintenance</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Guest Messaging (24/7)</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Revenue Management & Distribution</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Tax & Compliance Coordination</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Interior Design & Staging</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Concierge & Experiences</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Smart Locks & Sensors</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Storm & Seasonal Preparation</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">HOA Liaison & Insurance Guidance</li>
+      <li class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">Owner App & Dashboards</li>
+    </ul>
+  </section>
+
+  <!-- Owners / Everything Covered -->
+  <section id="owners" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">Everything else, fully covered</h2>
+      <p class="text-slate-700 max-w-3xl">Beyond operations, we support owners with investment guidance, legal/HOA help, hospitality upgrades, and technology. We coordinate — you approve.</p>
+      <div class="grid md:grid-cols-2 gap-6 mt-6 text-sm">
+        <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">
+          <h3 class="font-semibold mb-2">Owner Benefits</h3>
+          <ul class="list-disc ml-5 space-y-1 text-slate-700">
+            <li>Transparent monthly statements</li>
+            <li>Approval workflows for repairs</li>
+            <li>Performance reporting & KPIs</li>
+            <li>Local, bilingual support</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">
+          <h3 class="font-semibold mb-2">Popular Upsells</h3>
+          <ul class="list-disc ml-5 space-y-1 text-slate-700">
+            <li>Airport transfers, tours & chef services</li>
+            <li>Restocking & welcome baskets</li>
+            <li>Design refresh packages</li>
+            <li>Deep cleaning & detailing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results / Metrics -->
+  <section id="results" class="py-16 bg-emerald-700 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold">Owner outcomes that matter</h2>
+      <div class="grid sm:grid-cols-3 gap-6 mt-8">
+        <div class="bg-white/10 rounded-2xl p-6 shadow-soft"><div class="text-2xl font-bold">Higher RevPAR</div><p class="opacity-90">+10–25% via pricing & distribution</p></div>
+        <div class="bg-white/10 rounded-2xl p-6 shadow-soft"><div class="text-2xl font-bold">Happier Guests</div><p class="opacity-90">4.8★+ review targets</p></div>
+        <div class="bg-white/10 rounded-2xl p-6 shadow-soft"><div class="text-2xl font-bold">Fewer Headaches</div><p class="opacity-90">We coordinate and own outcomes</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">How it works</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200"><h3 class="font-semibold">1) Free consultation</h3><p class="text-slate-700 mt-2">Walkthrough your home and goals. No obligation.</p></div>
+      <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200"><h3 class="font-semibold">2) Seamless onboarding</h3><p class="text-slate-700 mt-2">Listings, operations, and automations set in days.</p></div>
+      <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200"><h3 class="font-semibold">3) We manage everything</h3><p class="text-slate-700 mt-2">You get clear statements and 24/7 coverage.</p></div>
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section id="coverage" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold">Where we operate</h2>
+        <p class="mt-4 text-slate-700">Guanacaste (Tamarindo, Liberia) • Puntarenas (Jacó, Manuel Antonio) • San José • Alajuela • Heredia • Limón • Cartago • Nicoya Peninsula • Osa Peninsula</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#contact" class="inline-flex bg-emerald-700 text-white px-5 py-3 rounded-full font-semibold hover:bg-emerald-800 shadow-soft">Get started</a>
+          <a href="tel:+15551234567" class="inline-flex bg-white ring-1 ring-slate-200 px-5 py-3 rounded-full font-semibold hover:ring-slate-300 shadow-soft">Call us</a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-soft ring-1 ring-slate-200">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1400&auto=format&fit=crop" alt="Costa Rica jungle and river" class="w-full h-80 object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / Revenue Strategy -->
+  <section id="pricing" class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">Pricing & Revenue Strategy</h2>
+    <div class="grid lg:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">
+        <h3 class="font-semibold mb-3">Standard Plan</h3>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 text-sm">
+          <li><strong>Management fee:</strong> <span class="font-semibold">25% of gross booking revenue</span> (typical CR range 20–30%).</li>
+          <li><strong>Cleaning fees:</strong> <span class="font-semibold">100% retained by LXV</span> (charged to guests).</li>
+          <li><strong>Included:</strong> Guest support, booking management, dynamic pricing, basic maintenance coordination, bill pay, monthly reports.</li>
+          <li><strong>Extras billed to owner:</strong> Major repairs/renovations, utilities (unless agreed), consumables, linen program, HOA fees.</li>
+          <li><strong>Upsell revenue:</strong> Transfers, tours, chef services — markup retained by LXV.</li>
+          <li><strong>CPA support:</strong> Optional US CPA consultation add‑on for US tax needs.</li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-50 to-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">
+        <h3 class="font-semibold mb-3">What’s included</h3>
+        <div class="grid grid-cols-2 gap-3 text-sm">
+          <span class="bg-white rounded-full px-3 py-2 ring-1 ring-slate-200">Cleaning ops</span>
+          <span class="bg-white rounded-full px-3 py-2 ring-1 ring-slate-200">Repairs</span>
+          <span class="bg-white rounded-full px-3 py-2 ring-1 ring-slate-200">Guest messaging</span>
+          <span class="bg-white rounded-full px-3 py-2 ring-1 ring-slate-200">Dynamic pricing</span>
+          <span class="bg-white rounded-full px-3 py-2 ring-1 ring-slate-200">Taxes help</span>
+          <span class="bg-white rounded-full px-3 py-2 ring-1 ring-slate-200">Owner portal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold">What owners say</h2>
+      <div class="grid lg:grid-cols-3 gap-6 mt-8">
+        <figure class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200"><blockquote class="text-lg">“Flawless turnovers and responsive team. Our reviews jumped immediately.”</blockquote><figcaption class="mt-3 text-sm text-slate-600">— Daniel & Laura, Tamarindo</figcaption></figure>
+        <figure class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200"><blockquote class="text-lg">“Finally a manager who understands revenue and guest experience.”</blockquote><figcaption class="mt-3 text-sm text-slate-600">— Sofía R., San José</figcaption></figure>
+        <figure class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200"><blockquote class="text-lg">“They handled taxes and maintenance like clockwork. Worth every colón.”</blockquote><figcaption class="mt-3 text-sm text-slate-600">— Andrés M., Jacó</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6">FAQs</h2>
+    <div class="divide-y divide-slate-200 bg-white rounded-2xl shadow-soft ring-1 ring-slate-200">
+      <details class="p-6" open>
+        <summary class="cursor-pointer text-lg font-semibold">What types of properties do you manage?</summary>
+        <p class="mt-2 text-slate-700">Condos, villas, and single‑family homes for short‑ to mid‑term stays.</p>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer text-lg font-semibold">Do you work with existing cleaners?</summary>
+        <p class="mt-2 text-slate-700">Yes — we can onboard your trusted crew or deploy ours.</p>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer text-lg font-semibold">How fast can we start?</summary>
+        <p class="mt-2 text-slate-700">Typical onboarding completes in 5–10 business days.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">Our Team</h2>
+      <p class="text-slate-700">Local property managers, cleaning supervisors, maintenance specialists, concierge staff — plus optional consultation with a US‑based CPA for owners with US tax needs.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-emerald-700 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p class="mb-4">Ready to maximize your property’s potential? Let’s talk.</p>
+      <form class="grid sm:grid-cols-2 gap-4">
+        <input type="text" placeholder="Name" class="p-3 rounded text-slate-900" required>
+        <input type="email" placeholder="Email" class="p-3 rounded text-slate-900" required>
+        <textarea placeholder="Your message" class="sm:col-span-2 p-3 rounded text-slate-900" rows="4" required></textarea>
+        <button type="submit" class="bg-white text-emerald-700 px-6 py-3 rounded-full font-semibold hover:bg-slate-100 sm:col-span-2 shadow-soft">Send Message</button>
+      </form>
+      <div class="mt-4 text-sm">
+        <a class="inline-block mr-4 underline text-white" href="mailto:info@lxv.cr">info@lxv.cr</a>
+        <a class="inline-block mr-4 underline text-white" href="tel:+15551234567">+1 (555) 123‑4567</a>
+        <a class="inline-block underline text-white" target="_blank" rel="noopener" href="https://wa.me/15551234567?text=Hi%20LXV%2C%20I%27m%20interested%20in%20property%20management">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+    <p>&copy; <span id="year"></span> LXV Property Management. All rights reserved.</p>
+    <p class="text-xs mt-2">This website provides general information and templates; it does not constitute legal advice.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
