@@ -15,7 +15,6 @@
     .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.08)}
     .icon{width:1.25rem;height:1.25rem;flex:none}
   </style>
-  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -89,7 +88,7 @@
     </div>
   </section>
 
-  <!-- Services (Redesigned) -->
+  <!-- Services -->
   <section id="services" class="py-16 max-w-7xl mx-auto px-6">
     <div class="flex items-end justify-between mb-8">
       <h2 class="text-3xl font-bold" data-i18n="services.title">Our Services</h2>
@@ -143,7 +142,7 @@
 
   <!-- Everything Covered -->
   <section id="owners" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx:auto px-6">
       <div class="flex items-end justify-between">
         <h2 class="text-3xl font-bold" data-i18n="owners.title">Everything else, fully covered</h2>
         <div class="text-right">
@@ -152,7 +151,6 @@
         </div>
       </div>
       <p class="text-slate-700 mt-3 max-w-3xl" data-i18n="owners.lead">Beyond daily ops, we cover owner controls, risk management, and experience upgrades.</p>
-
       <div class="grid md:grid-cols-3 gap-6 mt-6 text-sm">
         <div class="bg-white p-6 rounded-2xl shadow-soft ring-1 ring-slate-200">
           <h3 class="font-semibold mb-2" data-i18n="owners.controls">Owner Controls</h3>
@@ -218,7 +216,7 @@
     </div>
   </section>
 
-  <!-- Pricing & Simple Revenue Calculator -->
+  <!-- Pricing & Calculator -->
   <section id="pricing" class="py-16 max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold mb-8" data-i18n="pricing.title">Pricing & Revenue Strategy</h2>
     <div class="grid lg:grid-cols-2 gap-6">
@@ -256,7 +254,7 @@
     </div>
   </section>
 
-  <!-- Results / Case studies -->
+  <!-- Results -->
   <section id="cases" class="py-16 bg-slate-50">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold" data-i18n="cases.title">Owner results</h2>
@@ -321,7 +319,7 @@
       <h2 class="text-3xl font-bold mb-6" data-i18n="contact.title">Contact Us</h2>
       <p class="mb-4" data-i18n="contact.lead">Ready to maximize your property’s potential? Let’s talk.</p>
 
-      <!-- GOOGLE SHEETS FORM -->
+      <!-- Google Sheets Form -->
       <form id="propForm" class="grid sm:grid-cols-2 gap-4" novalidate>
         <input id="fName" name="name" type="text" placeholder="Name" class="p-3 rounded text-slate-900" required data-i18n-placeholder="contact.name">
         <input id="fEmail" name="email" type="email" placeholder="Email" class="p-3 rounded text-slate-900" required data-i18n-placeholder="contact.email">
@@ -437,10 +435,7 @@
       }
     };
 
-    const els = () => [
-      ...document.querySelectorAll('[data-i18n]'),
-      ...document.querySelectorAll('[data-i18n-placeholder]')
-    ];
+    const els = () => [...document.querySelectorAll('[data-i18n]'), ...document.querySelectorAll('[data-i18n-placeholder]')];
     function applyI18n(lang){
       const d=i18n[lang]||i18n.en; document.documentElement.lang=lang;
       try{localStorage.setItem('lxv_lang',lang)}catch{}
@@ -457,7 +452,7 @@
     applyI18n(select.value);
     select.addEventListener('change',()=>applyI18n(select.value));
 
-    // Get proposal buttons scroll
+    // Scroll CTAs
     document.querySelectorAll('.go-proposal').forEach(a=>{
       a.addEventListener('click', e=>{
         const section = document.querySelector('#contact');
@@ -467,38 +462,31 @@
 
     // Calculator
     function calc(){
-      const rate=+document.getElementById('rate').value||0;
-      const occ=+document.getElementById('occ').value||0;
-      const nights=+document.getElementById('nights').value||0;
+      const rate=+document.getElementById('rate')?.value||0;
+      const occ=+document.getElementById('occ')?.value||0;
+      const nights=+document.getElementById('nights')?.value||0;
       const booked = nights*(occ/100);
       const gross = rate*booked;
       const mgmt = gross*0.25;
       const owner = gross - mgmt;
       const fmt = v=>v.toLocaleString(undefined,{style:'currency',currency:'USD',maximumFractionDigits:0});
-      document.getElementById('calcOut').textContent = `Gross: ${fmt(gross)} • Our fee (25%): ${fmt(mgmt)} • Est. to you: ${fmt(owner)}`;
+      const out=document.getElementById('calcOut'); if(out) out.textContent = `Gross: ${fmt(gross)} • Our fee (25%): ${fmt(mgmt)} • Est. to you: ${fmt(owner)}`;
     }
-    document.getElementById('calcBtn').addEventListener('click', calc);
+    document.getElementById('calcBtn')?.addEventListener('click', calc);
 
-    // === Google Sheets submit ===
+    // === Google Sheets submit (multipart) ===
     const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyxMljELBIUYfC9PloLxq8iWKK13n8-2rGG3jxY2inqZ4_RqXuRTMlCZ6f2D7JtRj6v/exec';
     const WHATSAPP_NO = '50671661550';
-
     const form = document.getElementById('propForm');
-    const btn = document.getElementById('submitBtn');
+    const btn  = document.getElementById('submitBtn');
     const note = document.getElementById('formNote');
+    const show = (m) => { if (note) note.textContent = m; };
 
-    function show(msg){ if(note) note.textContent = msg; }
     async function submitToSheets(fd){
-      const params = new URLSearchParams();
-      for (const [k,v] of fd.entries()) params.append(k, v);
-      params.append('source', 'lxv.cr');
-      params.append('ua', navigator.userAgent);
-
-      const res = await fetch(WEB_APP_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params.toString()
-      });
+      fd.append('source','lxv.cr');
+      fd.append('ua', navigator.userAgent);
+      const res = await fetch(WEB_APP_URL, { method: 'POST', body: fd }); // no headers (simple request)
+      if (res.type === 'opaque') return true;
       if (!res.ok) throw new Error('Bad response');
       const json = await res.json().catch(()=>({ok:false}));
       if (!json.ok) throw new Error('Rejected');
@@ -511,20 +499,18 @@ Name: ${fd.get('name')}
 Email: ${fd.get('email')}
 Phone: ${fd.get('phone')}
 ${fd.get('message')}`;
-      const url = `https://wa.me/${WHATSAPP_NO}?text=${encodeURIComponent(msg)}`;
-      window.open(url, '_blank', 'noopener');
+      window.open(`https://wa.me/${WHATSAPP_NO}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     }
 
-    form.addEventListener('submit', async (e) => {
+    form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (form.botField && form.botField.value) return; // spam trap
-
       const fd = new FormData(form);
       try {
         btn.disabled = true; btn.textContent = 'Sending…'; show('Sending…');
         await submitToSheets(fd);
         show('Thanks! We received your request — we’ll contact you shortly.');
-        waFallback(fd); // optional confirmation on WhatsApp
+        waFallback(fd); // optional WhatsApp confirmation
         form.reset();
       } catch (err) {
         show('Couldn’t submit right now — opening WhatsApp instead.');
